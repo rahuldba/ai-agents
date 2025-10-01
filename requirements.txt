@@ -1,0 +1,9 @@
+# Python dependencies for AI Agents project
+streamlit
+crewai
+ollama
+python-dotenv
+pandas
+matplotlib
+openpyxl
+langchain_ollama
