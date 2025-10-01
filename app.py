@@ -8,8 +8,6 @@ import re
 import pandas as pd
 import datetime
 
-load_dotenv()
-
 # --- Modular, production-ready UI ---
 def set_theme(dark_mode):
     # Modern glassmorphism theme with improved color contrast and wider layout
@@ -365,7 +363,6 @@ def finance_analyzer_ui():
             df = pd.read_excel(uploaded_file)
             st.success("File uploaded and read successfully!")
             st.dataframe(df)
-            from agents.finance_sheet_analyzer import FinanceSheetAnalyzer
             analyzer = FinanceSheetAnalyzer()
             if regenerate or st.session_state.get('finance_first_run', True):
                 with st.spinner('Analyzing financial data...'):
